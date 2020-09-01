@@ -1,0 +1,85 @@
+		<scroll-view class="scroll" scroll-y="{{isScroll}}">
+    	<view class="box">
+    		<view class="bk_card">
+    			<view class="photo">
+    				<image bindtap="ViewImage" src="{{info.img.activity_img?info.img.activity_img:' '}}" mode="widthFix"></image>
+    			</view>
+    			<view class="contain" style="{{info.img.activity_img?'':'top:10%'}}">
+    				<view class="head">
+    					<view> <i class="iconfont icon-liulan" /><text>浏览次数：{{watch_num}}</text></view>
+    					<view> <text class="top_time">发布时间:<br/>{{publishTime}}</text></view>
+    				</view>
+
+    				<view class="place row">
+    					<view class="title"><i class="iconfont icon-didian" />活动地点:</view>
+    					<text class="p">{{info.space}}</text>
+    				</view>
+    				<view class="date row">
+    					<view class="title"><i class="iconfont icon-huodong" />活动时间:</view>
+    					<text class="p">{{info.activity_time}}</text>
+    				</view>
+    				<view class="containts row">
+    					<view class="title"><i class="iconfont icon-jianjie" />活动简介:</view>
+    					<text class="p">{{info.containts}}
+    					</text>
+    				</view>
+    				<view class="type row">
+    					<view class="title"><i class="iconfont icon-danwei" />创办单位:</view>
+    					<text class="p">{{info.creator_type==0?'个人':info.type_name}}</text>
+    				</view>
+    				<view class="char_group row" wx:if="{{info.creator_type>0}}">
+    					<view class="title"><i class="iconfont icon-danwei" />活动群号:</view>
+    					<text class="p">{{info.char_group}}</text>
+    				</view>
+    				<view class="date row">
+    					<view class="title"><i class="iconfont icon-shijian" />报名截止时间:</view>
+    					<text class="p">{{info.end_date}}</text>
+    				</view>
+
+    				<view class="date row">
+    					<view class="title"><i class="iconfont icon-huodong" />活动人数:</view>
+    					<text class="p">{{info.num?info.num:'无限制'}}</text>
+    				</view>
+
+
+    				<view  wx:if="{{(Qrimage)}}"  class="member_list function_box  function_btn" bindtap="make_qrimage">查看二维码海报</view>
+    				<view class="function_box">
+    					<block wx:if="{{authority}}">
+    						<view wx:if="{{!(Qrimage)}}" class="member_list function_btn" bindtap="make_qr">生成二维码</view>
+
+    					</block>
+    				</view>
+    				<view wx:if="{{Qrimage}}" class="Qrimage_box">
+    					长按保存活动二维码
+    					<image class="qrIamge" src="{{Qrimage}}" data-url="{{Qrimage}}" bindlongpress="saveImage" mode="widthFix"></image>
+    				</view>
+    				<view wx:else class="block">
+    				</view>
+
+
+    			</view>
+    		</view>
+    	</view>
+
+    </scroll-view>
+    <view class="center_circle  {{hover?'foot_circle_hover':' '}}" bindtap="js_hover">
+    	操作
+    </view>
+    <view class="foot_menu {{hover?'menu_circle_hover':' '}}">
+    	<view class="menu_circle" data-name="join" bindtap="activity_function">参加活动
+
+    	</view>
+    	<view class="menu_circle" data-name='member_list' bindtap="change_page">成员列表</view>
+    	<view class="menu_circle" data-name="esc" bindtap="activity_function">退出活动</view>
+    	<block wx:if="{{authority}}">
+    		<view class="menu_circle" data-name="revise" bindtap="activity_function">修改内容</view>
+    		<view class="menu_circle del_color" data-name="del" bindtap="activity_function">删除活动</view>
+    	</block>
+    </view>
+    <view wx:if="{{make_canvasImage}}">
+    	<image bindtap="ViewImage" src="{{make_canvasImage?make_canvasImage:'ddddd'}}" mode="widthFix"></image>
+    </view>
+	<block  wx:if="{{!isScroll}}">
+			<component-poster info="{{info}}" Qrimage="{{Qrimage}}"  bind:cavans_hidden='cavans_hidden' />
+	</block>
+

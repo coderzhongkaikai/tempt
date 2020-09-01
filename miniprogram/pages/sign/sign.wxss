@@ -1,0 +1,130 @@
+.head{
+  font-size: 32rpx;
+  color: rgb(222, 222, 222);
+  margin: 10rpx auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head image{
+  width: 500rpx;
+  height: 500rpx;
+}
+.icon-fuzhi{
+  margin-left: 30rpx;
+  padding:10rpx 50rpx ;
+}
+.icon-dianhua{
+  margin-left: 40rpx;
+  padding:10rpx 50rpx ;
+}
+.icon-dianhua:active{
+  color: #c59748;
+  opacity: 0.8;
+}
+.icon-fuzhi:active{
+  color: #c59748;
+  opacity: 0.8;
+}
+.btn{
+  height: 60rpx;
+  width: 60vw;
+  margin:20rpx auto;
+  border:2rpx solid red;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.title{
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 10rpx 30rpx;  
+  background: rgb(234, 231, 231);
+  border-radius: 20rpx;
+  margin:10rpx 10rpx ;
+}
+.hidden .card{
+  display: none;
+}
+
+@keyframes listshow {
+  from {transform: translate(0, 100rpx); opacity: 0}
+  to {transform: translate(0, 0); opacity: 1}
+}
+.card {
+  opacity: 0;
+  animation: listshow .3s forwards;
+  margin: 20rpx 20rpx;
+  border: 1rpx solid rgb(222, 216, 216);
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 320rpx;
+}
+.member_list{
+  border:2prx solid #d2d2d2;
+}
+
+.right,
+.left {
+  margin: 10rpx 20rpx;
+}
+
+.right image {
+  width: 180rpx;
+  height: 180rpx;
+}
+.del {
+  margin-top: 10rpx;
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 2rpx solid red;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.del_sign{
+  margin: 20rpx auto;
+  width: 220rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 2rpx solid red;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.foot{
+  text-align: center;
+margin: 30rpx 0rpx;
+border: 2rpx #f2bf40 solid;
+ border-radius: 15rpx;
+padding: 5rpx;
+}
+ .nosign{
+  border: 2rpx rgb(237, 89, 89) solid;
+
+}
+.left .p {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.left .p {
+  width: 60vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  background: rgba(0,0,0,.3);
+  right: 30rpx;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30rpx;
+}

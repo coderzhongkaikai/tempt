@@ -1,0 +1,19 @@
+.image{
+  margin:20rpx auto;
+  width: 600rpx;
+}
+.image image{
+  width: 600rpx;
+  height: 400rpx;
+}
+.video{
+  margin:20rpx auto;
+}
+.videos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.videos .title{
+  text-align: center;
+}

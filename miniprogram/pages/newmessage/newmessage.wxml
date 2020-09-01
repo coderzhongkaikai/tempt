@@ -1,0 +1,11 @@
+  	<view class="old_publish">
+    		<view class="title" wx:if="{{old_list.length>0}}" data-name="old_publish" bindtap="show_list">您留言的商店传来新信息({{old_list.length}})</view>
+    		<view class=" show">
+    			<view class="sheet_list _list" wx:for="{{old_list}}" style="animation-delay:.{{index}}s" wx:for-item="item" bindtap="navigator" data-name="old" data-item="{{item}}" data-index="{{index}}">
+    				<view class="p item">点击查看:<text>{{item.title}}</text></view>
+    			</view>
+    		</view>
+    	</view>
+        	<view class="noactivity" wx:if="{{old_list.length==0}}">
+    		<view class="font_foot">您没有新信息~</view>
+    	</view>

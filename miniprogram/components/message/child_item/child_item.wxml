@@ -1,0 +1,6 @@
+<view class="child" >
+	<view class="right">
+		<view class="nickname">{{info.creatorinfo.nickName}}</view>
+		<view class="message">{{info.contains}}</view>
+	</view>
+</view>

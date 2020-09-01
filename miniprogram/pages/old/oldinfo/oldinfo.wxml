@@ -1,0 +1,63 @@
+<view class="top">
+	<view class="left">
+		<view class=" ">{{info.title}}</view>
+		<view class="time">
+			发布时间：{{publishTime}}
+		</view>
+		<view class="icon_box">
+			<view>
+				<icon class="iconfont icon-liulan" /> 浏览次数:{{watch_num}} <text>  </text>
+			</view>
+			<view wx:if="{{info.type==0}}">
+				<icon class="iconfont icon-ziyuan" /> {{member_list.length}}人想要
+			</view>
+		</view>
+	</view>
+	<view class="right">
+		<view class="state">
+			<i wx:if="{{state==0}}" class="iconfont icon-yingye1" />
+			<i wx:else class="iconfont icon-yishoukong" />
+		</view>
+	</view>
+</view>
+<view class="detail">
+	<view  wx:if="{{info.type==0}}" class="price">
+		<icon class="iconfont icon-icon_huabanfuben" />交易价：{{info.price}}
+	</view>
+	<view class="contain">
+		{{info.contains}}
+	</view>
+
+	<view class="img">
+		<view wx:for="{{info.imgs}}" wx:for-item='item' wx:for-index="index" data-item="{{item}}" data-index="{{index}}" class="item">
+			<image src="{{item}}" data-url="{{item}}" bindtap="ViewImage" mode="widthFix"></image>
+		</view>
+	</view>
+</view>
+
+<view class="btn_box">
+	<block wx:if="{{author}}">
+		<view wx:if="{{state==0}}"  class="btn notwant" bindtap="change_state">打烊</view>
+		<view  wx:else class="btn" bindtap="change_state">营业</view>
+	</block>
+	<block wx:if="{{!author}}">
+		<view class="btn notwant" wx:if="{{show}}" bindtap="notwant">不想要了</view>
+		<view class="btn" wx:else bindtap="want">我想要</view>
+	</block>
+	<view class="info" wx:if="{{show||author}}">
+		<view class="card">
+			<view class="card_left">
+				<view class="p"><text>发布者信息:</text></view>
+				<block class=''>
+					<view class="p">姓名:<text>{{info.creatorinfo.studentname}}</text></view>
+					<view class="p">QQ号:<text>{{info.creatorinfo.QQ_num}}</text><i data-name="{{info.creatorinfo.QQ_num}}" bindtap="copy"  class="iconfont icon-fuzhi"/> </view>
+					<view class="p">手机号:<text>{{info.creatorinfo.phone_num}}</text>  <i  data-num="{{info.creatorinfo.phone_num}}" bindtap="call" class="iconfont icon-dianhua"/> </view>
+				</block>
+			</view>
+			<view class="right_img">
+			<i class="iconfont icon-dianzhuzhuanxiang"/>
+			</view>
+		</view>
+	</view>
+</view>
+<component-message old_id="{{info._id}}" bind:add_message="add_message" />

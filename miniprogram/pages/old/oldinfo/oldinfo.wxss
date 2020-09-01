@@ -1,0 +1,174 @@
+page{
+  background: #f6f6f6;
+}
+.icon-yingye1 {
+  font-size: 80rpx;
+  color: #f8b73e;
+}
+.top{
+  width: 100vw;
+  display: flex;
+  height: auto;
+  background: #ffffff;
+  justify-content: space-between;
+}
+.p{
+  width: 450rpx;
+}
+.state{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.row{
+  margin:30rpx 20rpx;
+}
+.right_img{
+  margin: 20rpx 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-dianzhuzhuanxiang{
+  font-size: 70rpx;
+  color: #f7b33c;
+}
+.icon-fuzhi{
+  margin-left: 30rpx;
+  padding:10rpx 50rpx ;
+}
+.icon-dianhua{
+  margin-left: 70rpx;
+  padding:10rpx 50rpx ;
+}
+.icon-dianhua:active{
+  color: #c59748;
+  opacity: 0.8;
+}
+.icon-fuzhi:active{
+  color: #c59748;
+  opacity: 0.8;
+}
+.right_img image {
+  width: 200rpx;
+  height: 230rpx;  
+}
+.right{
+  width: 150rpx;
+  margin:30rpx 20rpx;
+  text-align: center;
+  align-items: center;
+}
+
+.detail{
+  margin:30rpx 0rpx;
+  height: auto;
+  background: #ffffff;
+}
+.price{
+  color: red;
+  padding:20rpx;
+  display: flex;
+  align-items: baseline;
+}
+.time,.icon_box{
+  color: #818181;
+  font-size: 30rpx;
+}
+.contain{
+  padding:  10rpx 20rpx 30rpx 20rpx ;
+}
+.icon-icon_huabanfuben{
+  font-size: 40rpx;
+}
+.img{
+  margin:  10rpx 20rpx 30rpx 20rpx ;
+  padding-bottom: 20rpx;
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90vw;
+}
+.item{
+  width: 300rpx;
+  overflow: hidden;
+  border-radius: 30rpx;
+}
+.icon-liulan{
+  font-size: 30rpx;
+  color: #f8b73e;
+}
+.icon_box{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.icon-ziyuan{
+  font-size: 30rpx;
+  color: red;
+}
+.item image{
+ width: 100%;
+ height: 100%;
+}
+.btn_box{
+  margin-top: 30rpx;
+  background: #ffffff;
+  height: auto;
+  width: 100%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.btn{
+  margin:10rpx auto;
+  width: 200rpx;
+  background: #f8b73e;
+  border-radius: 30rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+.card {
+  font-size: 30rpx;
+  animation: listshow .3s forwards;
+  margin: 20rpx 20rpx;
+  border: 1rpx solid rgb(222, 216, 216);
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 190rpx;
+  color: black;
+}
+.left .p {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  width: 440rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.member_list{
+  border:2prx solid #d2d2d2;
+}
+.card_left{
+  margin: 10rpx 20rpx;
+}
+.left {
+  margin: 10rpx 20rpx;
+  min-width: 580rpx;
+}
+.right{
+  margin: 20rpx 10rpx;
+}
+.notwant{
+  background: none;
+  border: 2rpx solid red;
+}
+.icon-yishoukong{
+  font-size: 100rpx;
+}

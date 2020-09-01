@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "component-contain":"/components/publishcontain/publishcontain"
+
+  },
+  "navigationBarTitleText": "活动创建"
+}

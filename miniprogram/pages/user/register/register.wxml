@@ -1,0 +1,70 @@
+<view class="menu_card">
+	<view class="head_font"><i class=" iconfont icon-BIANXIE" /></view>
+	<view class="menu_box">
+		<block wx:if="{{!stuinfo.studentnumber}}">
+			<form bindsubmit="formSubmit" bindreset="formReset">
+				<!-- <view class="menu_list"><i class="iconfont icon-xuexiao"></i>
+					<view class="title">学校: </view>
+					<view class="school">
+						{{school}}
+					</view>
+				</view> -->
+				<view class="menu_list"><i class="iconfont icon-xuexiao"></i>
+					<view class="title">选择学院: </view>
+					<picker bindchange="bindPickerChange" range="{{college}}">
+						<view class="school_picker">
+							{{college[college_index]}}
+						</view>
+					</picker>
+				</view>
+				<view class="menu_list"><i class="iconfont icon-mao_huabanfuben"></i>
+					<view class="title">姓名: </view>
+					<input placeholder="请输入姓名" name="studentname" adjust-position="true" type="text"></input>
+				</view>
+				<!-- <view class="menu_list"><i class="iconfont icon-shenfenzhenghaoma"></i>
+					<view class="title">身份证号: </view>
+					<input placeholder="请输入身份证号" name="IDcard" adjust-position="true" type="text"></input>
+				</view> -->
+				<view class="menu_list"><i class="iconfont icon-input-number" />
+					<view class="title">学号: </view>
+					<input placeholder="请输入学号" name="studentnumber" adjust-position="true" type="number"></input>
+				</view>
+				<view class="menu_list"><i class="iconfont icon-dianhua" />
+					<view class="title">手机号码: </view>
+					<input placeholder="请输入手机号" name="phone_num" adjust-position="true" type="number"></input>
+				</view>
+				<view class="menu_list"><i class="iconfont icon-qq" />
+					<view class="title">QQ号: </view>
+					<input placeholder="请输入QQ号" name="QQ_num" adjust-position="true" type="number"></input>
+				</view>
+				<button class="btn" formType="submit">提交</button>
+			</form>
+		</block>
+		<block wx:else>
+			<view class="menu_list"><i class="iconfont icon-xuexiao" />
+				<view class="title">学院: </view>
+				{{stuinfo.college}}
+			</view>
+			<view class="menu_list"><i class="iconfont icon-mao_huabanfuben" />
+				<view class="title">姓名: </view>
+				{{stuinfo.studentname}}
+			</view>
+			<view class="menu_list"><i class="iconfont icon-input-number" />
+				<view class="title">学号: </view>
+				{{stuinfo.studentnumber}}
+			</view>
+
+			<view class="menu_list"><i class="iconfont icon-dianhua" />
+				<view class="title">手机号码: </view>
+				{{stuinfo.phone_num}}
+			</view>
+			<view class="menu_list"><i class="iconfont icon-qq" />
+				<view class="title">QQ号: </view>
+				{{stuinfo.QQ_num}}
+			</view>
+			<view class="btn">
+				<button class="btn" bindtap="change_submit">删除</button>
+			</view>
+		</block>
+	</view>
+</view>

@@ -1,0 +1,108 @@
+page{
+  background: #f7f7f7;
+}
+.list{
+  margin-top: 30rpx;
+}
+.top{
+  z-index: -1;
+}
+.image .options{
+  width: 600rpx;
+  height: 400rpx;
+}
+.topbkg{
+  width: 100%;
+}
+.about{
+  position: relative;
+  bottom: 100rpx;
+  margin: 0 auto;
+  width: 700rpx;
+  height: 400rpx;
+  background: #ffffff;
+  font-size: 32rpx;
+  border-radius: 30rpx 30rpx 0 0;
+}
+.team{
+  position: relative;
+  top: -80rpx;
+  margin: 0 auto;
+  width: 700rpx;
+  height: 250rpx;
+  font-size: 32rpx;
+  background: #ffffff;
+  border-radius: 30rpx 30rpx 0 0;
+}
+.other{
+  position: relative;
+  top: -60rpx;
+  margin: 20rpx auto;
+  width: 700rpx;
+  height: 300rpx;
+  font-size: 32rpx;
+  background: #ffffff;
+  border-radius: 30rpx 30rpx 0 0;
+}
+.icon-ziyuan{
+  color: red;
+  margin-right: 20rpx;
+
+}
+.team_p {
+  margin: 20rpx;
+  margin-left: 50rpx;
+  padding-top: 30rpx;
+  display: flex;
+  justify-content:space-between;
+  border-bottom: 4rpx solid #f7f7f7;
+  align-items:baseline;
+
+}
+.icon-tuandui{
+  color: #f8bb40;
+  margin-right: 20rpx;
+}
+.aboutImage_P{
+  position: relative;
+  top: -200rpx;
+  margin-left: 30rpx;
+}
+.about_p{
+  font-size: 32rpx;
+  margin: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  align-items:baseline;
+  border-bottom: 4rpx solid #f7f7f7;
+}
+.back{
+  position: absolute;
+  top: 5%;
+  padding: 20rpx 30rpx;
+}
+.icon-fanhui{
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.icon-guanyu{
+  color: #f8bb40;
+  margin-right: 20rpx;
+}
+.aboutImage{
+  width: 300rpx;
+  height: 200rpx;
+}
+.btn{
+  color: #000000;
+  background:none;
+  border-radius: 20rpx;
+  width: 100rpx;
+  height: 80rpx;
+  text-align: center;
+}
+.btn:active{
+  text-decoration:underline;
+  opacity: 0.5;
+}

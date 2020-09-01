@@ -1,0 +1,30 @@
+.child{
+  margin-left: 100rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.left .userimage{
+  width: 80rpx;
+  height: 80rpx;
+}
+.right{
+  padding: 10rpx 10rpx;
+  border-left:4rpx solid #f6f6f6 ;
+}
+.nickname{
+  font-size: 28rpx;
+  color: #a4a4a4;
+}
+.message{
+  width: 580rpx;
+  height: auto;
+  word-wrap:break-word;
+  font-size: 32rpx;
+}
+.reply{
+  font-size: 28rpx;
+  color: #586b95;
+}
+.reply:active{
+  text-decoration:#586b95  underline;
+}

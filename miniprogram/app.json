@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/activity_list/activity_list",
+    "pages/user/register/register",
+    "pages/user/myactivities/myactivities",
+    "pages/about/about",
+    "pages/publish/publish",
+    "pages/activity/activity",
+    "pages/activity/member_list/member_list",
+    "pages/sign/sign",
+    "pages/options/options",
+    "pages/old/oldlist/oldlist",
+    "pages/old/oldinfo/oldinfo",
+    "pages/old/oldpublish/oldpublish",
+    "pages/newmessage/newmessage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f3c041",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "backgroundColor": "#fcfcfc",
+    "borderStyle": "white",
+    "selectedColor": "#f9c546",
+    "list": [
+      {
+        "pagePath": "pages/old/oldlist/oldlist",
+        "iconPath": "images/old.png",
+        "selectedIconPath": "images/old_on.png",
+        "text": "二手"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/mypage.png",
+        "selectedIconPath": "images/mypage_on.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/activity_list/activity_list",
+        "iconPath": "images/activepage.png",
+        "selectedIconPath": "images/activepage_on.png",
+        "text": "活动"
+      }
+    ]
+  }
+}

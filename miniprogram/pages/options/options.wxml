@@ -1,0 +1,9 @@
+  <view class="image">
+  	<image bindtap="ViewImage" class="options" src="cloud://release-cfpbk.7265-release-cfpbk-1301655434/options.png" mode="widthFix" data-image="cloud://release-cfpbk.7265-release-cfpbk-1301655434/options.png"></image>
+  </view>
+  <view class="videos">
+      <view class="title">值班表操作指引</view>
+      <view class="video">
+      <video id="myVideo" src="cloud://release-cfpbk.7265-release-cfpbk-1301655434/sheet.mp4" danmu-list="{{danmuList}}" controls></video>
+      </view>
+  </view>

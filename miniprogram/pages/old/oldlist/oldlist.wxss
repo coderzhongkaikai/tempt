@@ -1,0 +1,221 @@
+page {
+  background: #f2f2f2;
+}
+
+.banner {
+  margin: 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #fcc55f;
+  color: #585858;
+  box-sizing: border-box;
+  border: 1.5vw solid #f8b73e;
+  border-radius: 30rpx;
+}
+
+.titlecolor {
+  color: #f3c041;
+
+}
+
+.tags_choose {
+  width: 10vw;
+}
+
+.tags_box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 30rpx;
+}
+
+.detail {
+  margin: 10rpx;
+  border-radius: 30rpx;
+}
+
+.detail .title {
+  font-size: 38rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tags {
+  margin: 10rpx;
+  font-size: 25rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  transition: all 0.6s;
+  line-height: 32rpx;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20rpx;
+  box-sizing: content-box;
+  border: 2rpx solid #f3c041;
+}
+
+.banner .p {
+  font-size: 38rpx;
+}
+
+.contain {
+  display: flex;
+  font-size: 32rpx;
+}
+
+.row {
+  flex-grow: 1;
+}
+
+.head {
+  height: 350rpx;
+}
+
+.type_choose_box {
+  display: flex;
+}
+
+.right_choose {
+  width: 10vw;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #f8b73e;
+}
+
+.icon-shaixuan {
+  margin-left: 10rpx;
+  font-size: 50rpx;
+}
+.type{
+  display: flex;
+}
+.type_l,.type_r{
+  flex-grow: 1;
+  text-align: center;
+}
+.type .text{
+  padding: 0 30rpx;
+  position: relative;
+  font-size: 32rpx;
+}
+.active_type{
+  color: #f3c041;
+}
+.active_type .line{
+  border-bottom: 2rpx solid #f3c041;
+}
+.icon-f11{
+  font-size: 20rpx;
+  position:absolute;
+  bottom: 0;
+}
+
+.type_choose {
+  background: #fcc55f;
+  width: 100vw;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #a49b87;
+  box-sizing: border-box;
+  border: 1.5vw solid #f8b73e;
+  display: flex;
+}
+
+.type_choose .picker {
+  flex: 1;
+  font-size: 3.8vw;
+  margin-left: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.iconfont_activity {
+  color: #fcc55f;
+}
+
+.choose_box {
+  display: flex;
+  justify-content: space-around;
+}
+
+._find {
+  width: 100vw;
+  height: 10vw;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+  display: flex;
+}
+
+._find .input {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: #ffffff;
+  border-radius: 30rpx;
+  text-align: center;
+}
+
+._find .input input {
+  height: 100%;
+}
+
+._find .input i {
+  line-height: 65rpx;
+}
+
+.oldlist {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 10rpx;
+}
+
+.item {
+  margin-top: 30rpx;
+  border-radius: 30rpx;
+  padding-bottom: 14rpx;
+  background: #ffffff;
+}
+
+.list_l,
+.list_r {
+  width: 350rpx;
+}
+
+.img {
+  width: 100%;
+  border-radius: 30rpx 30rpx 0 0;
+}
+
+.money {
+  display: flex;
+  text-align: center;
+  align-items: baseline;
+  margin: 5rpx auto;
+  color: red;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.icon-icon_huabanfuben {
+  font-size: 40rpx;
+}
+
+.activecolor {
+  background: #f3c041;
+}
+
+.detail {
+  background: #ffffff;
+}
+.create_png{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  left: 45vw;
+  bottom: 20rpx;
+}

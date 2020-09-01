@@ -1,0 +1,4 @@
+		<view wx:if="{{image}}" class="Qrimage_box">
+			长按保存本页二维码
+			<image class="qrIamge" src="{{image}}" data-url="{{image}}" bindlongpress="saveImage" mode="widthFix"></image>
+		</view>

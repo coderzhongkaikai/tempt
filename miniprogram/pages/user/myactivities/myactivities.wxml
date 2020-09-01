@@ -1,0 +1,104 @@
+    <scroll-view class="scroll" scroll-y="true">
+
+    	<view class="noactivity" wx:if="{{!(activity_list.length>0||activity_publish.length>0||sheet_list.length>0||sheet_publish.length>0)}}">
+    		<image src="../../../images/noimage.png" mode></image>
+    		<view class="font_foot">您还没有创建或加入任何活动哦~</view>
+    	</view>
+    	<view class="sheet_publish">
+    		<view class="title" wx:if="{{sheet_publish.length>0}}" data-name="sheet_publish" bindtap="show_list">我创建的值班表({{sheet_publish.length}})</view>
+    		<view class=" {{show==='sheet_publish'?'show':'hidden'}}">
+    			<view class="sheet_list _list" wx:for="{{sheet_publish}}" style="animation-delay:.{{index}}s" wx:for-item="item" bindtap="navigator" data-name="worksheet" data-item="{{item}}">
+    				<view class="p item">值班:<text>{{item.title}}</text></view>
+    			</view>
+    		</view>
+    	</view>
+
+    	<view class="sheet_list">
+    		<view class="title" wx:if="{{sheet_list.length>0}}" data-name="sheet_list" bindtap="show_list">我的值班({{sheet_list.length}})</view>
+    		<view class="box {{show==='sheet_list'?'show':'hidden'}}">
+    			<view class="sheet_list _list" wx:for="{{sheet_list}}" style="animation-delay:.{{index}}s" wx:for-item="item" bindtap="navigator" data-name="worksheet" data-item="{{item}}">
+    				<view class="p item">值班:<text>{{item.title}}</text></view>
+    			</view>
+    		</view>
+    	</view>
+
+    	<view class="activity_publish">
+    		<view class="title" data-name="activity_publish" bindtap="show_list" wx:if="{{activity_publish.length>0}}">我创建的活动({{activity_publish.length}})</view>
+    		<block wx:for="{{activity_publish}}" wx:for-item="item">
+    			<view class="item {{show==='activity_publish'?'show':'hidden'}}">
+    				<view class="activity_show" bindtap="navigator" data-name="activity" data-item="{{item}}">
+    					<view class="img">
+    						<image src="{{item.img.head_img?item.img.head_img:'../../../images/noimage.png'}}" mode="aspectFill" data-imgsrc="{{item}}" data-imgs="{{blog.img}}"></image>
+    					</view>
+    					<view class="right">
+    						<view class="activity_title">
+    							<view class="p_name">{{item.name}}</view>
+    						</view>
+    						<view class="detail">
+    							{{item.containts}}
+    						</view>
+    						<view class="foot">
+    							<view class="activity_time">
+    								<text>报名截止时间:</text>{{item.end_date}}
+    							</view>
+    							<view class="activity_time">
+    								<text>活动时间:</text>{{item.activity_time}}
+    							</view>
+    						</view>
+    					</view>
+    				</view>
+    			</view>
+    		</block>
+    	</view>
+
+    	<view class="activity_list">
+    		<view class="title" wx:if="{{activity_list.length>0}}" data-name="activity_list" bindtap="show_list">我参加的活动({{activity_list.length}})</view>
+    		<block wx:for="{{activity_list}}" wx:for-item="item">
+    			<view class="item {{show==='activity_list'?'show':'hidden'}}">
+    				<view class="activity_show" bindtap="navigator" data-name="activity" data-item="{{item}}">
+    					<view class="img">
+    						<image src="{{item.img.head_img?item.img.head_img:'../../../images/noimage.png'}}" mode="aspectFill" data-imgsrc="{{item}}" data-imgs="{{blog.img}}"></image>
+    					</view>
+    					<view class="right">
+    						<view class="activity_title">
+    							<view class="p_name">{{item.name}}</view>
+    						</view>
+    						<view class="detail">
+    							{{item.containts}}
+    						</view>
+    						<view class="foot">
+    							<view class="activity_time">
+    								<text>报名截止时间:</text>{{item.end_date}}
+    							</view>
+    							<view class="activity_time">
+    								<text>活动时间:</text>{{item.activity_time}}
+    							</view>
+    						</view>
+    					</view>
+    				</view>
+    			</view>
+    		</block>
+    	</view>
+
+    	<view class="old_publish">
+    		<view class="title" wx:if="{{old_publish.length>0}}" data-name="old_publish" bindtap="show_list">发布的二手交易({{old_publish.length}})</view>
+    		<view class=" {{show==='old_publish'?'show':'hidden'}}">
+				<block wx:for="{{old_publish}}" style="animation-delay:.{{index}}s" wx:for-item="item">
+    			<view class="sheet_list _list {{item.state==0?'':'over'}}" style="animation-delay:.{{index}}s"  bindtap="navigator" data-name="old" data-item="{{item}}">
+    				<view class="p item">二手发布:<text>{{item.title}}</text></view>
+    			</view>
+				</block>
+    		</view>
+    	</view>
+    	<view class="old_want">
+    	  		<view class="title" wx:if="{{want_old.length>0}}" data-name="want_old" bindtap="show_list">想要的二手物({{want_old.length}})</view>
+    		<view class=" {{show==='want_old'?'show':'hidden'}}">
+					<block wx:for="{{want_old}}" style="animation-delay:.{{index}}s" wx:for-item="item" >
+    			<view class="sheet_list _list  {{item.state==0 ?' ':'over'}}" style="animation-delay:.{{index}}s"  bindtap="navigator" data-name="old" data-item="{{item}}">
+    				<view class="p item">二手物:<text>{{item.title}}</text></view>
+    			</view>
+		</block>
+    		</view>
+    	</view>
+    </scroll-view>
+    <view class="goTop" bindtap="goTop" hidden="{{goTop}}">回到顶部</view>

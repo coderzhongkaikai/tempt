@@ -1,0 +1,67 @@
+  <!-- <view class="banner">
+  	<view class="p">展示板</view>
+  	<view class="contain">
+  		<view class="row">
+  			<view>累计发布数：</view>
+  			<view>今日发布数：</view>
+  		</view>
+  		<view class="row">
+  			<view>累计浏览次数：</view>
+  			<view>正在营业：</view>
+  		</view>
+  	</view>
+  </view> -->
+
+  <view class='_find'>
+  	<view class="input">
+  		<input placeholder="关键字查找" value="{{keyword}}" bindinput="bindinput">
+  		</input>
+  		<i class="iconfont icon-chazhao" />
+  	</view>
+
+  	<view class="tags_choose" bindtap="tags_choose">
+  		<text class="iconfont icon-shaixuan {{show? 'titlecolor':''}}  {{choose_order_box?'iconfont_activity':''}}"></text>
+  	</view>
+  </view>
+  <view class="tags" wx:if="{{show}}">
+  	<view class="tags_box">
+  		<view wx:for="{{tags}}" class="tags  {{select_tag===tags[index]?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}" bindtap="active">
+  			{{tags[index]}}
+  		</view>
+  	</view>
+  </view>
+	<view class="type" >
+			<view class="type_l  {{type==0?'active_type':''}}" data-index="0" bindtap="type_change"><text class="text line">出旧物</text></view>
+			<view class="type_r  {{type==1?'active_type':''}}" data-index="1" bindtap="type_change"><text class="text line">收旧物</text></view>
+	</view>
+  <view class="oldlist">
+  	<view class="list_l">
+  		<view wx:for="{{l_showdatas}}" wx:for-item="item" data-item='{{item}}' class="item" bindtap="goto">
+  			<!-- <image wx:for="{{tempPics}}" src="{{item.pic}}" bindload="loadPic" binderror="loadPicError" data-index="{{index}}" /> -->
+  			<image class="img" src="{{item.imgs[0]}}" mode="widthFix" />
+  			<view class="detail">
+  				<view class="title">{{item.title}}</view>
+  				<view wx:if="{{item.type==0}}" class="money">
+  					<icon class="iconfont icon-icon_huabanfuben" />交易价：{{item.price}}
+  				</view>
+  			</view>
+  		</view>
+  	</view>
+  	<view class="list_r">
+  		<view wx:for="{{r_showdatas}}" wx:for-item="item" data-item='{{item}}' class="item" bindtap="goto">
+  			<!-- <image wx:for="{{tempPics}}" src="{{item.pic}}" bindload="loadPic" binderror="loadPicError" data-index="{{index}}" /> -->
+  			<image class="img" src="{{item.imgs[0]}}" mode="widthFix" />
+  			<view class="detail">
+  				<view class="title">{{item.title}}</view>
+  				<view wx:if="{{item.type==0}}"  class="money">
+  					<icon class="iconfont icon-icon_huabanfuben" />交易价：{{item.price}}
+  				</view>
+  			</view>
+  		</view>
+  	</view>
+  </view>
+  <navigator url="../oldpublish/oldpublish">
+  	<view>
+  		<image class="create_png" src="../../.../../../images/create.png"></image>
+  	</view>
+  </navigator>

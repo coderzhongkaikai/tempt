@@ -1,0 +1,13 @@
+<view class="message_box">
+	<view class="title">留言板({{message_list.length}})</view>
+	<view class="contains">
+		<view class="p_item" wx:for="{{message_list}}" wx:for-item="item">
+			<component-item class="item{{index}}" bind:message_reply="message_reply" index="{{index}}" _id='{{item}}'/>
+		</view>
+	</view>
+	<view class="say">
+		<input placeholder="{{reply_to?'请输入回复内容：' :'写留言'}}" value="{{show_input}}" bindinput="bindinput"></input>
+		<view class="btn" bindtap="submit">发送</view>
+	</view>
+
+</view>

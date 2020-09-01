@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "component-authorize":"/components/authorize/authorize",
+    "component-system":"/components/system/system"
+  },
+  "navigationStyle":"custom",
+  "navigationBarTitleText": "功能主页",
+  "navigationBarBackgroundColor": "#f8b73e"
+}

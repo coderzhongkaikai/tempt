@@ -1,0 +1,29 @@
+<scroll-view  class="scroll" scroll-y>
+<view class="publish_card ">
+<view class="title_icon"><i class="iconfont icon-mingcheng1 " /></view>
+	<view class=" title">创建活动</view>
+	<view class="photo_box">
+		<view class="photo">上传展示头像
+			<block wx:if="{{head_img}}">
+				<image bindtap="ViewImage" data-name="head_img" src="{{head_img}}"  mode="widthFix"></image>
+				<i catchtap="DelImg" data-name="head_img" class="iconfont icon-JINZHI del" />
+			</block>
+			<block wx:else>
+				<image bindtap="upimg" class="upimg" data-name="head_img" src="../../images/upimage.png"  mode="widthFix"></image>
+			</block>
+		</view>
+		<view class="photo">上传展示海报
+			<block wx:if="{{activity_img}}">
+				<image bindtap="ViewImage" class="upimg" data-name="activity_img" src="{{activity_img}}"></image>
+				<i bindtap="DelImg" data-name="activity_img" class="iconfont icon-JINZHI del" />
+			</block>
+			<block wx:else>
+				<image bindtap="upimg" data-name="activity_img" src="../../images/upimage.png"></image>
+			</block>
+		</view>
+	</view>
+	<component-contain contain="{{info}}" bind:get_info="get_info">
+	</component-contain>
+
+</view>
+</scroll-view>

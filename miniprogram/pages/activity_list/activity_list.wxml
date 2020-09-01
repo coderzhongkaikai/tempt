@@ -1,0 +1,79 @@
+  <view>
+  	<swiper class="head" indicator-dots="true" autoplay="true" interval="2000" duration="500">
+  		<swiper-item>
+  			<image class="img" src="{{imagelist[0].img.activity_img?imagelist[0].img.activity_img:'../../images/Snipaste_2020-05-17_13-24-35.png'}}" mode="aspectFill" data-index="0" bindtap="goto"></image>
+  		</swiper-item>
+  		<swiper-item>
+  			<image class="img" src="{{imagelist[1].img.activity_img?imagelist[1].img.activity_img:'../../images/Snipaste_2020-05-17_13-24-35.png'}}" mode="aspectFill" data-index="1" bindtap="goto"></image>
+  		</swiper-item>
+  		<swiper-item>
+  			<image class="img" src="{{imagelist[2].img.activity_img?imagelist[2].img.activity_img:'../../images/Snipaste_2020-05-17_13-24-35.png'}}" mode="aspectFill" data-index="2" bindtap="goto"></image>
+  		</swiper-item>
+  	</swiper>
+  </view>
+  <view class="type_choose_box">
+  	<view class="type_choose">
+  		<picker class="picker" bindchange="bindPickerChange" value="{{activity_index}}" range="{{activity_type}}">
+  			<view class="picker">
+  				<i class="iconfont icon-chazhao" />
+  				{{activity_type[activity_index]}}
+  			</view>
+  		</picker>
+  	</view>
+  	<view class="right_choose" bindtap="activity_choose">
+  		<text class="iconfont icon-shaixuan  {{choose_order_box?'iconfont_activity':''}}"></text>
+  	</view>
+  </view>
+  <view class="tags_box" wx:if="{{activity_index==0}}">
+  	<view wx:for="{{tags}}" class="tags  {{select_tag===tags[index]?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}" bindtap="active">
+  		{{tags[index]}}
+  	</view>
+  </view>
+  <view class="tags_box" wx:if="{{activity_index==1||activity_index==2}}">
+  	<view wx:for="{{tag2}}" class="tags  {{select_tag===tag2[index]?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}" bindtap="active">
+  		{{tag2[index]}}
+  	</view>
+  </view>
+  <view class="choose_box" wx:if="{{choose_order_box}}">
+  	<view wx:for="{{choose_order}}" bindtap="order_choose" class="tags  {{choose_order_index  === index?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}">
+  		{{choose_order[index]}}
+  	</view>
+  </view>
+  <view class='_find' wx:if="{{activity_index==4}}">
+  	<view class="input">
+  		<input placeholder="关键字查找" bindinput="bindinput">
+  		</input>
+  		<i class="iconfont icon-chazhao" />
+
+  	</view>
+  </view>
+  <scroll-view class="scroll" scroll-y="true" bindscrolltolower="bindscrolltolower">
+  	<block wx:for="{{showdatas}}" wx:for-item="item">
+  		<view class="activity_show" bindtap="navigator" data-item="{{item}}">
+  			<view class="img">
+  				<image src="{{item.img.head_img?item.img.head_img:'../../images/noimage.png'}}" mode="aspectFill" data-imgsrc="{{item}}" data-imgs="{{blog.img}}"></image>
+  			</view>
+  			<view class="right">
+  				<view class="title">
+  					<view class="p">{{item.name}}</view>
+  				</view>
+  				<view class="detail">
+  					{{item.containts}}
+  				</view>
+  				<view class="foot">
+  					<view class="activity_time">
+  						<text>报名截止时间:</text>{{item.end_date}}
+  					</view>
+  					<view class="activity_time">
+  						<text>活动时间:</text>{{item.activity_time}}
+  					</view>
+  				</view>
+  			</view>
+  		</view>
+  	</block>
+  </scroll-view>
+  	<view>
+  <navigator url="../publish/publish">
+  		<image class="create_png" src="../../images/create.png"></image>
+  </navigator>
+  	</view>

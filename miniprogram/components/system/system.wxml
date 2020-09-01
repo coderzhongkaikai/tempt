@@ -1,0 +1,11 @@
+<view class="bak" wx:if="{{!hidden}}">
+    <view class="card">
+    <view class="title">系统提示</view>
+    <view class="contain">
+    {{contain}}
+    </view>
+
+      <view class="confirm" bindtap="confirm">确认</view>
+      <view class="foot">信息发布于：{{time}}</view>
+    </view>
+</view>

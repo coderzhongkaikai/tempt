@@ -1,0 +1,129 @@
+@import "../../../iconfont.wxss";
+.btn{
+  height: 60rpx;
+  width: 60vw;
+  margin:20rpx auto;
+  background:#fdbb33;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.btn:active,.end_result:active{
+  opacity: 0.6;
+} 
+.title{
+  height: 50rpx;
+  line-height: 40rpx;
+  padding: 10rpx 30rpx;  
+  background: rgb(244, 244, 244);
+  border-radius: 20rpx;
+  margin:20rpx 10rpx ;
+}
+.hidden .card{
+  display: none;
+}
+
+@keyframes listshow {
+  from {transform: translate(0, 100rpx); opacity: 0}
+  to {transform: translate(0, 0); opacity: 1}
+}
+.card {
+  opacity: 0;
+  animation: listshow .3s forwards;
+  margin: 20rpx 20rpx;
+  border: 1rpx solid rgb(222, 216, 216);
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 330rpx;
+}
+.member_list{
+  border:2prx solid #d2d2d2;
+}
+.left {
+  margin: 10rpx 20rpx;
+}
+.right{
+  margin: 20rpx 10rpx;
+}
+.icon-fuzhi{
+  margin-left: 30rpx;
+  padding:10rpx 50rpx ;
+}
+.icon-dianhua{
+  margin-left: 40rpx;
+  padding:10rpx 50rpx ;
+}
+.icon-dianhua:active{
+  color: #c59748;
+  opacity: 0.8;
+}
+.icon-fuzhi:active{
+  color: #c59748;
+  opacity: 0.8;
+}
+.del{
+  margin-top: 10rpx;
+width: 200rpx;
+height: 40rpx;
+line-height: 40rpx;
+border: 2rpx solid red;
+border-radius: 30rpx;
+font-size: 28rpx;
+text-align: center;
+
+}
+.del_sign{
+  font-size: 40rpx;
+}
+.right image {
+  width: 200rpx;
+  height: 230rpx;  
+}
+
+.right .del {
+  margin-top: 10rpx;
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 2rpx solid red;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+
+
+.left .p {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  width: 440rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  background: rgba(0,0,0,.3);
+  right: 30rpx;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30rpx;
+}
+.end_result{
+  display: none;
+}
+.show .end_result{
+  height: 60rpx;
+width: 60vw;
+margin: 20rpx auto;
+border:2rpx solid #fdbb33;
+border-radius: 30rpx;
+text-align: center;
+line-height: 60rpx;
+  display: block;
+}

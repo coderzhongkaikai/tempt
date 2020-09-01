@@ -1,0 +1,48 @@
+			<view class='p'><text>选择旧物交换类型:</text>
+				<picker class="type" bindchange="type_Change" range="{{type}}">
+					<view class="">
+						{{type[type_id]}}
+					</view>
+				</picker>
+			</view>
+			<form bindsubmit="formSubmit">
+				<view class="container">
+					<view class="{{show?'tags':''}}">
+						<view class="p " style="border-bottom: none;display: flex;justify-content: center;">
+							<view style="font-size: 30rpx;">添加标签</view>
+							<view class="tags_choose" bindtap="tags_choose">
+								<text class="iconfont icon-jia {{show? 'titlecolor':''}}  {{choose_order_box?'iconfont_activity':''}}"></text>
+							</view>
+						</view>
+						<view class="tags_box" wx:if="{{show}}">
+							<view wx:for="{{tags}}" class="tags  {{select_tag===tags[index]?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}" bindtap="active">
+								{{tags[index]}}
+							</view>
+						</view>
+					</view>
+					<view class="p">
+						<view class="title">标题:</view><input class="title_input" name="title" placeholder="商品名称"></input>
+					</view>
+					<view class='contain'>
+						<view class="">详细介绍:</view>
+						<textarea maxlength="-1" placeholder="新旧程度，品牌型号，入手渠道..." name="contains" bindinput="bindinput" auto-height style="width:auto" />
+						<view class="footer">{{cursor}}字</view>
+  </view>
+  <view class="p" wx:if="{{type_id==0}}">
+		<view class="price">价格:</view><input class="title_input" placeholder="交易价格" name="price"></input>
+	</view>
+<view class="upimages">
+<view class="top">{{FilePaths.length}}/6张</view>
+<block  wx:if="{{FilePaths.length !=0}}">
+<view class="upload" wx:key="{{index}}" wx:for="{{FilePaths}}" >
+  <image class="upimg" src="{{FilePaths[index]}}"bindtap="ViewImage" data-url="{{FilePaths[index]}}" mode="widthFix"></image>
+	<view class="delImg" catchtap="DelImg" data-index="{{index}}">
+    <image src="../../../images/del.png"></image>
+  </view>
+</view>
+</block>
+ <image wx:if="{{FilePaths.length>5 ? false:true}}" class="upimg" src="../../../images/upimage.png" bindtap="upimg"></image>
+</view>
+</view>
+     <button class="btn" formType="submit">创建</button>
+</form>

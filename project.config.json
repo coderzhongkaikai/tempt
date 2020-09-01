@@ -1,0 +1,177 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"appid": "wx88e83500ae25abd4",
+	"projectname": "%E9%87%8D%E9%82%AE%E8%AF%BE%E5%90%8E",
+	"libVersion": "2.11.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/register/register",
+					"pathName": "pages/user/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/worksheet/worksheet",
+					"pathName": "pages/worksheet/worksheet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/publish/publish",
+					"pathName": "pages/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity_list/activity_list",
+					"pathName": "pages/activity_list/activity_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/member_list/member_list",
+					"pathName": "pages/activity/member_list/member_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/myactivities/myactivities",
+					"pathName": "pages/user/myactivities/myactivities",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "components\\list\\list",
+					"pathName": "components\\list\\list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": "scene=158753855446209790709",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/activity",
+					"pathName": "pages/worksheet/worksheet",
+					"query": "scene=158753037892809790709",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/sign/sign",
+					"pathName": "pages/sign/sign",
+					"query": "scene=158755408434609790709",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/old/oldlist/oldlist",
+					"pathName": "pages/old/oldlist/oldlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/old/oldpublish/oldpublish",
+					"pathName": "pages/old/oldpublish/oldpublish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/old/oldinfo/oldinfo",
+					"pathName": "pages/old/oldinfo/oldinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/old/oldpublish/oldpublish",
+					"pathName": "pages/old/oldpublish/oldpublish",
+					"scene": null
+				}
+			]
+		}
+	}
+}

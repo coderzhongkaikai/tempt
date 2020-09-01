@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "component-poster":"/components/qr_poster/qr_poster"
+  },
+  "navigationBarTitleText": "活动详情",
+  "navigationBarBackgroundColor": "#fdbb33"
+  
+}

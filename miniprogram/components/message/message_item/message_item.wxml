@@ -1,0 +1,14 @@
+<view class="creator" >
+	<view class="left">
+		<image class="userimage" src="{{info.creatorinfo.avatarUrl}}"></image>
+	</view>
+	<view class="right">
+		<view class="nickname">{{info.creatorinfo.nickName}}</view>
+		<view class="message">{{info.contains}}</view>
+		<view wx:if="{{info.reply_list.length==0 && show}}" class="reply" bindtap="reply">回复</view>
+	</view>
+</view>
+	<block wx:for="{{info.reply_list}}" wx:for-item="item" >
+    <component-child class="child" show="{{show}}" reply_item="{{item}}"/>
+		</block>
+		<view wx:if="{{info.reply_list.length>0 && show}}" class="re_reply" bindtap="reply">回复</view>

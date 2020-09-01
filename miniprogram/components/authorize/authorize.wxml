@@ -1,0 +1,10 @@
+<component-drawer drawerShow="{{drawerShow}}">
+	<view slot="drawer-box">
+		<view class="bkg">
+				<view class="p"><i class="close" bind:tap="onClose">X</i></view>
+			<view>
+			<button class="login" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">获取微信授权信息</button>
+			</view>
+		</view>
+	</view>
+</component-drawer>

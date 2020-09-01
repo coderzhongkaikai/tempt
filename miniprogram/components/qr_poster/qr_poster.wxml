@@ -1,0 +1,8 @@
+<view class="bkg">
+  
+	<canvas type="2d" class="canvas {{canvasHeight}}" canvas-id="canvasBox" id="canvasBox" style="display:' ';position:' ';width:90%;height:80%"></canvas>
+	<view class="canvasImg" >
+		<view class="btn left" bindtap="back">取消返回</view>
+		<view class="btn right" bindtap="saveImage">保存本地</view>
+	</view>
+</view>

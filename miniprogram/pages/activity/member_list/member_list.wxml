@@ -1,0 +1,53 @@
+    <scroll-view class="scroll" scroll-y="true">
+    	<view class="btn" bindtap="sign_publish"  wx:if="{{looker===creator}}" >发布签到</view>
+					<view class="card">
+    					<view class="left">
+    						<view class="p"><text>发布者信息:</text></view>
+    						<block class=''>
+    							<view class="p">姓名:<text data-name="{{creator_info.studentname}}">{{creator_info.studentname}}</text></view>
+    							<view class="p">学号:<text>{{creator_info.studentnumber}}</text><i data-name="{{creator_info.studentnumber}}" bindtap="copy"  class="iconfont icon-fuzhi"/> </view>
+    							<view class="p">QQ号:<text>{{creator_info.QQ_num}}</text><i data-name="{{creator_info.QQ_num}}" bindtap="copy"  class="iconfont icon-fuzhi"/> </view>
+									<view class="p">手机号:<text>{{creator_info.phone_num}}</text>  <i  data-num="{{creator_info.phone_num}}" bindtap="call" class="iconfont icon-dianhua"/> </view>
+    							<view class="p">学院:<text>{{creator_info.college}}</text></view>
+								</block>
+    					</view>
+    					<view class="img right">
+    						<image src="{{creator_info.avatarUrl}}"></image>
+    					</view>
+    				</view>
+    	<view class="list">
+    		<block wx:for="{{sign_list}}" wx:for-item="item">
+    			<view class="sign_list {{show===item._id ?'show':'hidden'}}">
+    				<view class="title" data-name="{{item._id}}" bindtap="show_list">{{item.formatDate}}签到</view>
+    				<view class="end_result" style="animation-delay:.2s" data-item="{{item}}" bindtap="navigator">查看签到结果</view>
+    			</view>
+    		</block>
+    		<view class="member_list {{show=== 'member_list' ?'show':'hidden'}}">
+    			<view class="title" data-name="member_list" bindtap="show_list">参加人员列表({{member_list.length}})</view>
+    			<block wx:for="{{member_list}}" wx:for-item="item" wx:for-index="index">
+    				<view class="card" style="animation-delay:.{{index}}s">
+    					<view class="left">
+    						<view class="p">昵称:<text>{{item.nickName}}</text></view>
+    						<block wx:if="{{looker===creator||looker===item.studentnumber}}">
+    							<view class="p">姓名:<text data-name="{{item.studentname}}">{{item.studentname}}</text></view>
+    							<view class="p">学号:<text>{{item.studentnumber}}</text><i data-name="{{item.studentnumber}}" bindtap="copy"  class="iconfont icon-fuzhi"/> </view>
+    							<view class="p">QQ号:<text>{{item.QQ_num}}</text><i data-name="{{item.QQ_num}}" bindtap="copy"  class="iconfont icon-fuzhi"/> </view>
+									<view class="p">手机号:<text>{{item.phone_num}}</text>  <i  data-num="{{item.phone_num}}" bindtap="call" class="iconfont icon-dianhua"/> </view>
+									<!-- <view class="p">学号:<text  bindlongpress="longPress" data-name="{{item.studentnumber}}">{{item.studentnumber}}</text></view>
+    							<view class="p">QQ号:<text  bindlongpress="longPress" data-name="{{item.QQ_num}}">{{item.QQ_num}}</text></view>
+    							<view class="p" data-num="{{item.phone_num}}" bindtap="call">手机号:<text>{{item.phone_num}}</text></view> -->
+    						</block>
+    							<view class="p">学院:<text>{{item.college}}</text></view>
+    					</view>
+    					<view class="img right">
+    						<image src="{{item.avatarUrl}}"></image>
+    						<view wx:if="{{looker===creator||looker===item.studentnumber}}" class="del" bindtap="del" data-index="{{index}}" data-item="{{item}}">删除成员</view>
+    					</view>
+
+    				</view>
+    			</block>
+    		</view>
+
+    	</view>
+    </scroll-view>
+    <view class=".goTop" bindtap="goTop" hidden="{{goTop}}">回到顶部</view>

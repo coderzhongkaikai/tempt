@@ -1,0 +1,48 @@
+.message_box{
+  margin-top: 60rpx;
+  padding-bottom: 30rpx;
+  background: #ffffff;
+  height: auto;
+}
+.title{
+  padding: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-bottom: 2rpx solid #f8b73e;
+}
+.contains{
+  padding: 30rpx;
+  min-height: 300rpx;
+}
+.p_item{
+  margin-bottom: 30rpx;
+}
+.say{
+  border-top: 2rpx solid #f8b73e;
+  padding: 20rpx;
+  height: 40rpx;
+  display: flex;
+}
+.say input{
+  width: 560rpx;
+  border-radius: 30rpx;
+  padding:10rpx;
+  background: #f6f6f6;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.btn{
+  margin:10rpx;
+  width: 130rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background: #f8b73e;
+}
+.btn:active{
+  opacity: 0.7;
+  background: #d99f34;
+}
+

@@ -1,0 +1,160 @@
+page{
+  background: #f3c041;
+
+}
+.scroll{
+  height: 100vh;
+  z-index: 10;
+  width: 100vw;
+  background: #fff;
+  border-radius: 100rpx 100rpx 0 0;
+  overflow: hidden;
+}
+.publish_card{
+  width: 100vw;
+  height:100vh;
+  z-index: 1;
+  background: #fff;
+  border-radius: 100rpx 100rpx 0 0;
+}
+.publish_box{
+margin: 215rpx 30rpx 20rpx 30rpx;
+border-radius: 20rpx;
+box-sizing: border-box;
+}
+.title{
+  height: 50rpx;
+  margin: 20rpx 30rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #f3c041;
+  border-radius: 100rpx 100rpx 0 0;
+}
+ .publish_card .title_icon{
+  text-align: center;
+}
+.upimg i{
+  position: absolute;
+  left: 36vw;
+  top: 24rpx;
+  color: #f3c041;
+}
+.p{
+  display: flex;
+  font-size: 30rpx;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 20rpx 30rpx;
+  height: 60rpx;
+  border-bottom: 1rpx solid #f3c041;
+}
+.num{
+  display: flex;
+  font-size: 30rpx;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 20rpx 30rpx;
+  height: 60rpx;
+  border-bottom: 1rpx solid #f3c041;
+}
+.p text{
+}
+.p .put{
+  margin-left: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.p::before,.activity_content::before{
+  color: red;
+  content: '*';
+  margin-right: 5rpx;
+}
+.p .name{
+  margin-left: 10rpx;
+  width: 520rpx;
+}
+.type{
+  color: #808080;
+  margin-left: 10rpx;
+  width: 480rpx;
+}
+.time{
+  color: #808080;
+  margin-left: 10rpx;
+  width: 450rpx;
+}
+.show_color{
+  color: rgb(0, 0, 0);
+}
+
+.start_time{
+  border-bottom: none;
+}
+.space{
+  color: #000000;
+  margin-left: 10rpx;
+  width: 430rpx;
+}
+.activity_content{
+  margin: 20rpx 30rpx;
+  font-size: 30rpx;
+  height: auto;
+  border-bottom: 1rpx solid #f3c041;
+  position: relative;
+}
+
+
+.activity_content textarea{
+  padding: 18rpx;
+}
+.activity_content .footer{
+  position: absolute;
+  right: 20rpx;
+  bottom: 0rpx;
+  font-size: 20rpx;
+  color: #808080;
+}
+.photo_box{
+  display: flex;
+  justify-content: space-around;
+
+}
+.photo{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.photo image:active{
+  opacity: 0.2;
+  background: #3e3e3e;
+}
+.photo image{
+  margin-top: 20rpx;
+width: 206rpx;
+height: 192rpx;
+}
+.photo i{
+  position: absolute;
+  top: 50rpx;
+  color: red;
+  right: -10rpx;
+}
+.photo i:active{
+  font-size: 30rpx;
+  background: #7b7b7b;
+}
+
+.btn{
+  margin-top: 70rpx;
+  margin-bottom: 30rpx;
+width: 500rpx;
+background-color: #f3c041;
+border-radius: 50rpx;
+color: #616456;
+font-size: 32rpx;
+}
+.btn:active{
+  opacity: 0.8;
+}

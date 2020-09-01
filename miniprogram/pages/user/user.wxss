@@ -1,0 +1,89 @@
+.topbanner{
+  z-index: 99;
+  width: 100vw;
+  height: 400rpx;
+}
+.head_bk{
+position: absolute;
+top: 220rpx;
+left: 30rpx;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+.icon-xiaoxi1{
+  padding:20rpx ;
+  color: #55aa55;
+}
+.message{
+  position: relative;
+}
+.red{
+  content: " 1";
+  border: 10rpx solid red;
+  border-radius: 10rpx;
+  position: absolute;
+  z-index: 1000;
+  right: 15rpx;  
+}
+.block_card{
+  height: 150rpx;
+}
+ .img_show{
+  z-index: 99;
+  width: 150rpx;
+  height: 150rpx;  
+  overflow: hidden;
+  border: 6rpx solid #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.name_show{
+  margin-left: 25rpx;
+  color: rgb(255, 255, 255);
+  font-size: 36rpx;
+  z-index: 99;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+
+.menu_card{
+  width: 100vw;
+  background: #fff;
+  border-radius: 100rpx 100rpx 0 0;
+}
+.menu_box{
+margin: 0rpx 30rpx 20rpx 30rpx;
+border-radius: 20rpx;
+box-sizing: border-box;
+}
+.menu_list{
+  height: 90rpx;  
+  border-radius: 20rpx;
+  background: #f7f7f7;
+  display: flex;
+  margin-top: 20rpx;
+  align-items: center;
+border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+font-size: 30rpx;
+color: #808080;
+/* box-shadow:1px 1px 20px #333333; */
+}
+.menu_list:active{
+  background: #eceaea;
+  opacity: 0.6;
+}
+.menu_list .iconfont{
+  color: #f6cd03;
+  font-size: 60rpx;
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+}
+.menu_list .right{
+ position: absolute;
+  right: 20rpx;
+  color: #d6d6d6;
+}

@@ -1,0 +1,45 @@
+ <view class="top">
+ 	<navigator delta open-type="navigateBack">
+ 		<view class="back"> <i class="iconfont icon-fanhui" /> </view>
+ 	</navigator>
+
+ 	<image class="topbkg" src="../../images/banner1.png"></image>
+ </view>
+ <view class="about">
+ 	<view class="aboutImage_P">
+ 		<image class="aboutImage" src="../../images/about.png"></image>
+ 		<view class="about_p"><view><i class="iconfont icon-guanyu" />关于小程序(v1.01)</view>
+     <!-- <button  style="width:300rpx;heigth:10rpx;font-size:32rpx;margin:0rpx"   class="btn" bindtap="goTo">
+ 				查看操作指南
+ 			</button> -->
+			 </view>
+ 		<view style="margin-left:15rpx">为学生个人，学生组织和校外团体提供一个集中化的各类活动发布展示平台。
+		<text>\n</text>校园内发布二手物交易。
+ 	
+	 	</view>
+	
+ 	</view>
+ </view>
+
+ <view class="team ">
+ 	<view class="team_p "><view><i class="iconfont icon-tuandui" />关于团队</view>
+   	 <button style="width:300rpx;heigth:10rpx;font-size:32rpx;margin:0rpx" class="btn" open-type="contact" bindcontact="onCustomerServiceButtonClick">
+ 	联系我们
+ 	</button></view>
+ 	<view  style="margin-left:50rpx">
+ 		开发：朱春临  2018级软件工程学院<text>\n</text>
+ 	</view>
+ </view>
+
+  <view class="other ">
+ 	<view class="team_p "><view><i class="iconfont icon-ziyuan" />其他说明</view>
+   	 <button style="width:300rpx;heigth:10rpx;font-size:32rpx;margin:0rpx" class="btn" open-type="contact" bindcontact="onCustomerServiceButtonClick">
+ 	问题反馈
+ 	</button></view>
+ 	<view  style="margin-left:50rpx;">
+第一次登录后会自动绑定微信号和学号，以此来保证个人用户的信息安全。
+在使用过程中如有其他疑问请联系我们！感谢您的使用!
+ 	</view>
+
+ </view>
+ 

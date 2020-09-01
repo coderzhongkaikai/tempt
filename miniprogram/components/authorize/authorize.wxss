@@ -1,0 +1,30 @@
+.bkg{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 220rpx;
+  opacity: 1;
+  background: #ffffff;
+}
+.login{
+   display: flex;
+    background-color: #fdbb33;
+    border-radius: 50rpx;
+    color: #616456;
+    align-items: center;
+}
+.p{
+  position: relative;
+  height: 100rpx;
+}
+.login:active{
+  opacity: 0.8;
+}
+.close{
+  position: absolute;
+  right: 0rpx;
+  padding: 30rpx;
+}
+.close:active{
+  opacity: 0.3;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "component-message":"/components/message/message"
+  },
+  "navigationBarTitleText": "详细信息",
+    "navigationBarBackgroundColor": "#f8b73e",
+    "backgroundTextStyle": "dark"
+}

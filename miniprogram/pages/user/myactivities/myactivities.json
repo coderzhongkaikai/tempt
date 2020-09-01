@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "component-list":"/components/list/list"
+  },
+  "navigationBarTitleText": "我的活动",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#f8b73e",
+  "backgroundTextStyle": "dark" 
+}

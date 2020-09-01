@@ -1,0 +1,4 @@
+<view class="drawer" hidden="{{!drawerShow}}">
+  <slot name="drawer-box"></slot>
+   <slot name="sheet-box"></slot>    
+</view>

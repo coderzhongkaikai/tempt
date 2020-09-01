@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "活动展示",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#f8b73e",
+  "backgroundTextStyle": "dark" 
+}

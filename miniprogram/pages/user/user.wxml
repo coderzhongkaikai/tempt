@@ -1,0 +1,46 @@
+<view>
+	<image class="topbanner" src="../../images/banner.png"></image>
+	<view class="head_bk">
+		<view class="img_show">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+		<view class="name_show">
+			<open-data type="userNickName"></open-data>
+		</view>
+		<view bindtap="getnew" class="message">
+		<i class="iconfont icon-xiaoxi1"/>
+		<text wx:if="{{newmessage.length>0}}" class="red"/>
+		</view>
+	</view>
+</view>
+
+<view class="menu_card">
+	<view class="menu_box">
+		<view class="menu_list" data-user="ture" data-title="register" bindtap="page_change"><i class="iconfont icon-editor" />
+			<text>填写信息</text><i class="iconfont icon-next right" />
+		</view>
+		<view class="menu_list" data-title="publish" bindtap="page_change"><i class="iconfont icon-all" />
+			<text>活动创建</text><i class="iconfont icon-next right" />
+		</view>
+		<navigator url="/pages/old/oldpublish/oldpublish">
+			<view class="menu_list"> <i class="iconfont icon-jiu" />
+			<text>创建二手交易</text><i class="iconfont icon-next right" />
+	</view>
+	</navigator>
+	<view class="menu_list" data-user="ture" data-title="myactivities" bindtap="page_change"><i class="iconfont icon-shoucang" />
+		<text>我的活动</text><i class="iconfont icon-next right" />
+	</view>
+	<view class="menu_list" data-title="about" bindtap="page_change"><i class="iconfont icon-guanyu" />
+		<text>关于</text><i class="iconfont icon-next right" />
+	</view>
+
+</view>
+</view>
+
+<!-- 底部弹出层 -->
+<component-authorize drawerShow="{{drawerShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+</component-authorize>
+<block wx:if="{{system.state}}">
+	<component-system contain="{{system.contain}}" time="{{system.time}}">
+	</component-system>
+</block>

@@ -1,0 +1,64 @@
+		<form bindsubmit="formSubmit" bindreset="formReset">
+			<view class='p'><text>活动名称:</text>
+				<view class="name"> <input name="name" placeholder="请输入活动名称" value="{{info.name}}"></input></view>
+			</view>
+
+			<view class='p'><text>创办单位:</text>
+				<picker class="type" bindchange="_idChange" value="{{creator_id}}" range="{{creator}}">
+					<view class="{{creator_type<3?'show_color':''}}">
+						{{creator[creator_type]}}
+					</view>
+				</picker>
+			</view>
+			<view wx:if="{{creator_type==0}}">
+				<view class="tags_box">
+					<view wx:for="{{tags}}" class="tags  {{select_tag===tags[index]?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}" bindtap="active">
+						{{tags[index]}}
+					</view>
+					<view class="foot">请选择一个标签，方便别人找到你</view>
+				</view>
+			</view>
+			<view wx:if="{{creator_type==1||creator_type==2}}">
+				<view class="tags_box">
+					<view wx:for="{{tag2}}" class="tags  {{select_tag===tag2[index]?'activecolor':''}} " data-id="{{index}}" data-name="{{item}}" bindtap="active">
+						{{tag2[index]}}
+					</view>
+					<view class="foot">请选择一个标签，方便别人找到</view>
+				</view>
+			</view>
+
+			<view class='p' wx:if="{{creator_type==1||creator_type==2}}">组织名称: <view class="name">
+					<input name="type_name" placeholder="请输入部门/组织名称" value="{{info.type_name}}"></input></view>
+			</view>
+			<view class='p'><text>活动地点:</text>
+				<view class="space"> <input name="space" placeholder="填写地点" value="{{info.space}}"></input></view>
+			</view>
+
+			<view class='p'><text>活动时间: </text>
+				<view class="activity_time"> <input name="activity_time" placeholder="填写时间" value="{{info.activity_time}}"></input></view>
+			</view>
+			<block wx:if="{{creator_type>0}}">
+				<view class='p'><text>活动群号: </text>
+					<view class="char_group"> <input name="char_group" placeholder="活动群号" value="{{info.char_group}}"></input></view>
+				</view>
+			</block>
+			<view class=' activity_content'><text >活动简介:</text>
+				<textarea maxlength="-1" placeholder="有关活动简介,活动要求....." value="{{info.containts}}" name="containts" bindblur="bindTextAreaBlur" bindinput="bindinput" auto-height />
+				<view class="footer">{{cursor}}字</view>
+  		</view>
+			<view class='p'><text>报名结束时间:</text>
+				<picker class="time" mode="date" data-type="end" start="{{now_date}}" bindchange="bindTimeChange">
+					<view class="picker">
+						<text  class="{{end_date?'show_color':''}}">选择结束时间: {{end_date}}</text>
+					</view>
+				</picker>
+			</view>
+			<view class='num'><text>活动人数上限:</text>
+				<view class="name"> <input name="num" placeholder="默认无上限" value="{{info.num}}"></input></view>
+			</view>
+
+
+  
+     <button class="btn" formType="submit">创建</button>
+   
+  </form>

@@ -1,0 +1,57 @@
+<view class="head">
+	<image src="{{Qrimage}}" mode="widthFix" data-url="{{Qrimage}}" bindlongpress="saveImage"></image>
+	长按保存签到码
+</view>
+<view wx:if="{{looker===creator}}" class="del_sign" bindtap="del_sign">删除此次签到</view>
+
+<view class="member_list {{show=== 'member_sign' ?'show':'hidden'}}">
+	<view class="title" data-name="member_sign" bindtap="show_list">已签到({{member_sign.length}})</view>
+	<block wx:for="{{member_sign}}" wx:for-item="item">
+		<view class="card" style="animation-delay:.{{index}}s">
+			<view class="left">
+				<view class="p">昵称:<text>{{item.nickName}}</text></view>
+				<block wx:if="{{looker===creator||looker===item.studentnumber}}">
+					<view class="p">姓名:<text  data-name="{{item.studentname}}">{{item.studentname}}</text></view>
+					<view class="p">学号:<text>{{item.studentnumber}}</text><i data-name="{{item.studentnumber}}" bindtap="copy" class="iconfont icon-fuzhi" /> </view>
+					<view class="p">QQ号:<text>{{item.QQ_num}}</text><i data-name="{{item.QQ_num}}" bindtap="copy" class="iconfont icon-fuzhi" /> </view>
+					<view class="p">手机号:<text>{{item.phone_num}}</text> <i data-num="{{item.phone_num}}" bindtap="call" class="iconfont icon-dianhua" /> </view>
+					<!-- <view class="p">学号:<text bindlongpress="longPress" data-name="{{item.studentnumber}}">{{item.studentnumber}}</text></view>
+					<view class="p">QQ号:<text bindlongpress="longPress" data-name="{{item.QQ_num}}">{{item.QQ_num}}</text></view>
+					<view class="p">联系方式:<text data-num="{{item.phone_num}}" bindtap="call">{{item.phone_num}}</text></view> -->
+				</block>
+
+			</view>
+			<view class="img right">
+				<image src="{{item.avatarUrl}}"></image>
+				<view class="foot">签到成功</view>
+			</view>
+
+		</view>
+	</block>
+</view>
+<view class="member_list {{show=== 'member_unsign' ?'show':'hidden'}}">
+	<view class="title" data-name="member_unsign" bindtap="show_list">未签到({{member_unsign.length}})</view>
+	<block wx:for="{{member_unsign}}" wx:for-item="item">
+		<view class="card" style="animation-delay:.{{index}}s">
+			<view class="left">
+				<view class="p">昵称:<text>{{item.nickName}}</text></view>
+				<block wx:if="{{looker===creator||looker===item.studentnumber}}">
+					<view class="p">姓名:<text>{{item.studentname}}</text></view>
+					<view class="p">学号:<text>{{item.studentnumber}}</text><i data-name="{{item.studentnumber}}" bindtap="copy" class="iconfont icon-fuzhi" /> </view>
+					<view class="p">QQ号:<text>{{item.QQ_num}}</text><i data-name="{{item.QQ_num}}" bindtap="copy" class="iconfont icon-fuzhi" /> </view>
+					<view class="p">手机号:<text>{{item.phone_num}}</text> <i data-num="{{item.phone_num}}" bindtap="call" class="iconfont icon-dianhua" /> </view>
+					<!-- <view class="p">学号:<text bindlongpress="longPress" data-name="{{item.studentnumber}}">{{item.studentnumber}}</text></view>
+					<view class="p">QQ号:<text bindlongpress="longPress" data-name="{{item.QQ_num}}">{{item.QQ_num}}</text></view>
+					<view class="p">联系方式:<text data-num="{{item.phone_num}}" bindtap="call">{{item.phone_num}}</text></view> -->
+				</block>
+				<view class="p">学院:<text>{{item.college}}</text></view>
+			</view>
+			<view class="img right">
+				<image src="{{item.avatarUrl}}"></image>
+				<view class="foot nosign">未签到</view>
+			</view>
+
+		</view>
+	</block>
+</view>
+<view class=".goTop" bindtap="goTop" hidden="{{goTop}}">回到顶部</view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "component-child": "../child_item/child_item"
+  }
+}

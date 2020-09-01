@@ -1,0 +1,40 @@
+.bak {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  transition: opacity .5s;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+.card{
+  margin: 400rpx auto;
+  width: 500rpx;
+  padding-bottom: 60rpx;
+  background: #efefef;
+  border-radius: 50rpx;
+}
+.card .title{
+  text-align: center;
+  line-height: 150rpx;
+}
+.card .contain{
+  font-size: 28rpx;
+  margin: 0rpx 20rpx;
+  text-align: left;
+}
+.confirm{
+  margin: 30rpx auto;
+  background: #f8b73e;
+  border-radius: 30rpx;
+  width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;  
+}
+.foot{
+margin-top: 30rpx;
+  font-size: 20rpx;
+  color: #9f9f9f;
+}
